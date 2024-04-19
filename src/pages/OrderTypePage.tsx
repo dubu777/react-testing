@@ -18,11 +18,13 @@ export default function OrderTypePage() {
         handleOrderTypeClick={handleDeliveryBtnClick}
         icon="ic-delivery.png"
         orderType="delivery"
+        testId="deliveryBtn"
       />
       <OrderType
         handleOrderTypeClick={handlePickupBtnClick}
         icon="ic-pickup.png"
         orderType="pickup"
+        testId="pickupBtn"
       />
     </Wrapper>
   );

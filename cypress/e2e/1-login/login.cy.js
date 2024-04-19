@@ -25,6 +25,7 @@ describe("로그인 화면", () => {
     // then - 로그인에 성공하고 메인화면으로 이동한다
     cy.url().should((url) => {
       const currentUrl = new URL(url);
+      console.log(currentUrl.pathname, 'pathname');
       expect(currentUrl.pathname).to.equal("/");
     });
   });

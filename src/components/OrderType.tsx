@@ -7,6 +7,7 @@ interface IOrderType {
   orderType: OrderCategory;
   icon: string;
   handleOrderTypeClick: MouseEventHandler<HTMLButtonElement>;
+  testId: string;
 }
 
 const orderCategory = {
@@ -18,9 +19,10 @@ export default function OrderType({
   orderType,
   icon,
   handleOrderTypeClick,
+  testId,
 }: IOrderType) {
   return (
-    <OrderTypeBtn onClick={handleOrderTypeClick}>
+    <OrderTypeBtn onClick={handleOrderTypeClick} data-cy={testId}>
       <img
         width={40}
         height={40}
