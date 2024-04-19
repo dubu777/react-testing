@@ -13,6 +13,8 @@ describe("로그인 화면", () => {
     cy.get("@emailInput").invoke("val").should("eq", "test@email.com");
     cy.get("@passwordInput").invoke("val").should("eq", "password");
 
+
+    // 실제 서버로 요청하지 않게 mocking
     cy.intercept(
       {
         method: "POST",

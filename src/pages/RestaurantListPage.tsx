@@ -37,6 +37,7 @@ export default function RestaurantListPage() {
       {restaurantList?.map((restaurant) => (
         <RestaurantListBtn
           key={restaurant.id}
+          data-cy={restaurant.id}
           onClick={() => handleRestauratClick(restaurant.id, restaurant.name)}
         >
           <img alt="food-type" src={restaurant.icon} width={36} height={36} />
